@@ -156,7 +156,6 @@ function getNumbers(min, max) {
 
 console.log(`від ${MAX_VALUE} до ${MIN_VALUE}:`);
 const totalEvenSum = getNumbers(MIN_VALUE, MAX_VALUE);
-
 console.log(`${totalEvenSum}`);
 
 // 8 Задача//
@@ -182,3 +181,42 @@ console.log(`min('hello', 10): ${min('hello', 10)}`);
 console.log(`min(15, true): ${min(15, true)}`);
 
 // 9 Задача//
+// Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+
+function isAdult(age) {
+  if (age >= 18) {
+    return true
+  } else {
+    return confirm
+  }
+}
+
+console.log(isAdult(25));
+console.log(isAdult(16));
+
+// 10 Задача//
+// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++){
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    }
+    else if (i % 3 === 0) {
+      console.log('fizz');
+    }
+    else if (i % 5 === 0) {
+      console.log('buzz');
+    }
+    else {
+      console.log(i);
+    }
+  }
+}
+fizzBuzz(20)
